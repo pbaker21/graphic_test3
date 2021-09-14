@@ -126,13 +126,12 @@
                     <Calendar Name="ToDate"></Calendar>
                 </StackPanel>
             </Popup>
-            -->
-
+            
 
             <Popup Margin="10,10,0,13" Name="Popup1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="194" Height="200" IsOpen="True">
                 <TextBlock Name="McTextBlock" Background="LightBlue"> This is popup text</TextBlock>
             </Popup>
-
+-->
 
             <Button VerticalAlignment="Center" Width="32" Grid.Row="0" Grid.Column="0">
                 <Image Source="{DynamicResource calendar}" />
