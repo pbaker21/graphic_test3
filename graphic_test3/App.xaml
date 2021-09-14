@@ -1,0 +1,27 @@
+﻿<Application x:Class="graphic_test3.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:graphic_test3"
+             StartupUri="MainWindow.xaml">
+
+
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <BitmapImage x:Key="basket" UriSource="assests/Basket32.png"></BitmapImage>
+            <BitmapImage x:Key="calendar" UriSource="assests/Calendar32.png"></BitmapImage>
+            <BitmapImage x:Key="camera" UriSource="assests/Camera32.png"></BitmapImage>
+            <BitmapImage x:Key="menu" UriSource="assests/Menu32.png"></BitmapImage>
+            <BitmapImage x:Key="refresh" UriSource="assests/Refresh32.png"></BitmapImage>
+            <BitmapImage x:Key="settings" UriSource="assests/settings01.png"></BitmapImage>
+            <BitmapImage x:Key="signpost" UriSource="assests/signpost.png"></BitmapImage>
+            <BitmapImage x:Key="tagsearch" UriSource="assests/Tag_Search32.png"></BitmapImage>
+            <BitmapImage x:Key="favorites" UriSource="assests/favorites.png"></BitmapImage>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+
+
+
+</Application>

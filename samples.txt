@@ -1,0 +1,399 @@
+
+
+void add_Image(String image_and_path){
+
+	Image newImage = new Image();
+	
+	BitmapImage src = new BitmapImage();
+	src.BeginInit();
+	src.UriSource = new Url(image_and_path, UriKind.Absolute);
+	src.EndInit();
+	newImage.Source = src;
+	
+	newImage.Stretch = Stretch.Uniform;
+	newImage.Height = 100;
+	
+	Panel_Images.Children.Add(newImage);
+}
+
+
+void Load_Images(String path){
+
+	if(path == "") return;
+
+	try{
+		DirectoryInfo folder = new DirectoryInfo(path);
+		
+		if(folder.Exists){
+			
+			foreach(FileInfo fileinfo in folder.GetFiles()){
+			
+				if(*.jpg".Contains(fileinfo.Extension.ToLower())){
+			
+					add_Image(fileinfo.FullName);
+				}
+			}	
+		}
+	}catch{
+	}
+}
+
+
+
+
+
+
+   <ResourceDictionary>
+            <BitmapImage x:Key="basket" UriSource="assests/Basket32.png"></BitmapImage>
+            <BitmapImage x:Key="calendar" UriSource="assests/Calendar32.png"></BitmapImage>
+        </ResourceDictionary>
+        
+        
+         <ResourceDictionary Source="ResourceDictionaries/Dictionary1.xaml"/>
+         
+         
+         
+         
+ <DockPanel>
+            <ToolBarTray DockPanel.Dock="Top" Height="50" Opacity="0.7">
+                <ToolBarTray.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB8B8B8" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </ToolBarTray.Background>
+
+                <ToolBar>
+                    <Button>
+                        <Image Source="{DynamicResource basket}" />
+                    </Button>
+                    <Separator Margin="5,0,5,0" Width="35"/>
+                    <Button>
+                        <Image Source="{DynamicResource calendar}" />
+                    </Button>
+                </ToolBar>
+
+            </ToolBarTray>
+
+            <FlowDocumentScrollViewer x:Name="flowPanelBody" Margin="0" Width="auto" Height="auto"></FlowDocumentScrollViewer>
+        </DockPanel>
+
+
+        <Grid Name="GridPanel" Width="auto" Height="60" VerticalAlignment="Bottom" >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="WhiteSmoke" Offset="0"/>
+                    <GradientStop Color="#FFD4BCBC" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+
+
+ Background="C:/xampp/htdocs/vega_356/views/theme_default/bgthemes/body/countryside_02.jpg"
+
+
+C:/Users/Paul_/source/repos/graphic_test3/graphic_test3/photos/thumbnails/tst_7223_1001.jpg
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        <Grid Name="GridPanel1" Width="auto" Height="60" VerticalAlignment="Top" >
+           
+            <ToolBarTray DockPanel.Dock="Top" Height="50" Opacity="0.7">
+                <ToolBarTray.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB8B8B8" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </ToolBarTray.Background>
+
+                <ToolBar>
+                    <Button>
+                        <Image Source="{DynamicResource basket}" />
+                    </Button>
+                    <Separator Margin="5,0,5,0" Width="35"/>
+                    <Button>
+                        <Image Source="{DynamicResource calendar}" />
+                    </Button>
+                </ToolBar>
+
+            </ToolBarTray>
+
+        </Grid>
+
+
+        <Grid Name="GridPanel2" VerticalAlignment="Center">
+            <FlowDocumentScrollViewer x:Name="flowPanelBody" IsToolBarVisible="True" Width="auto" Height="auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            </FlowDocumentScrollViewer>
+        </Grid>
+
+
+
+        <Grid Name="GridPanel3" Width="auto" Height="60" VerticalAlignment="Bottom" >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="WhiteSmoke" Offset="0"/>
+                    <GradientStop Color="#FFD4BCBC" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+
+
+
+
+
+<Grid Name="GridPanel1" Width="auto" Height="60" VerticalAlignment="Top" >
+        
+	<Grid Name="gridButtons" ShowGridLines="True" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Button>
+                <Image Source="{DynamicResource basket}" />
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Button>
+                <Image Source="{DynamicResource calendar}" />
+            </Button>
+        </StackPanel>
+    </Grid>
+
+
+
+</Grid>
+
+#######################
+
+<Grid ShowGridLines="True">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>                
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions  Grid.Row="0" Grid.Column="0">
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock FontSize="14" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Foreground="Green"  
+         Text="Author Name" Height="20" VerticalAlignment="Top" />
+
+        <Button Grid.Row="0" Grid.Column="0">
+            <Image Source="{DynamicResource basket}" />
+        </Button>
+
+    </Grid>
+
+
+
+
+<FlowDocumentScrollViewer x:Name="flowPanelBody" IsToolBarVisible="False" Width="auto" Height="auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+
+
+		<Border Name="border" BorderBrush="Gray" Background="LightGray" Margin="15 15 15 15" CornerRadius="6" BorderThickness="2" DockPanel.Dock="Top">
+                    <StackPanel VerticalAlignment="Top">
+                        
+                        <Label VerticalAlignment="Top" Margin="15 0 0 0">tst_7223_1001</Label>
+
+                        <StackPanel Name="stackpanel" Margin="5 5 5 0" Background="#FFC2D2E6" Orientation="Horizontal">
+                            <Image Margin="10,10,10,20" Name="newImage" Source="C:/Users/Paul_/source/repos/graphic_test3/graphic_test3/photos/thumbnails/tst_7223_1001.jpg" />
+                        </StackPanel>
+
+                        <StackPanel Margin="0 0 15 5" HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt1">Cart</Button>
+                            <Separator Width="10" />
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt2">Fav</Button>
+                            <Separator Width="10" />
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt3">Tag</Button>
+                        </StackPanel>
+
+                    </StackPanel>
+                    
+                </Border>
+
+
+
+ 		<Border Name="border1" Background="LightGray" Margin="15 15 15 15" CornerRadius="6" BorderThickness="2" DockPanel.Dock="Top">
+
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Border.BorderBrush>
+
+                    <StackPanel VerticalAlignment="Top">
+
+                        <Label VerticalAlignment="Top" Margin="15 0 0 0">tst_7223_1001</Label>
+
+                        <StackPanel Name="stackpanel1" Margin="0 0 0 0" Background="#FFC2D2E6" Orientation="Horizontal">
+                            <Image Margin="10,10,10,10" Name="newImage1" Source="C:/Users/Paul_/source/repos/graphic_test3/graphic_test3/photos/thumbnails/tst_7223_1001.jpg" />
+                        </StackPanel>
+
+                        <StackPanel Margin="0 0 15 5" HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt11">Cart</Button>
+                            <Separator Width="10" />
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt12">Fav</Button>
+                            <Separator Width="10" />
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt13">Tag</Button>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+                
+                
+
+
+
+                <Border Name="border" BorderBrush="Gray" Background="LightGray" Margin="15 15 15 15" CornerRadius="6" BorderThickness="2" DockPanel.Dock="Top">
+
+                    <StackPanel VerticalAlignment="Top">
+
+                        <Label VerticalAlignment="Top" Margin="10 0 0 0">tst_7223_1001</Label>
+
+                        <StackPanel Name="stackpanel" Margin="0 0 0 0" Background="LightGray" Orientation="Horizontal">
+                            <Image Margin="10,10,10,10" Name="newImage" Source="C:/Users/Paul_/source/repos/graphic_test3/graphic_test3/photos/thumbnails/tst_7223_1001.jpg" />
+                        </StackPanel>
+
+                        <StackPanel Name="stackbuttons" Margin="0 0 15 5" HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt1">Cart</Button>
+                            <Separator Width="10" />
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt2">Fav</Button>
+                            <Separator Width="10" />
+                            <Button Padding="5" DockPanel.Dock="Bottom" Name="butt3">Tag</Button>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+                
+
+//=================================================================================================
+
+[WPF Animation]
+
+https://www.youtube.com/watch?v=b9G7uxhAzt0
+
+
+[handycontrol]
+https://hosseini.ninja/handycontrol/extend_controls/floatingBlock/
+
+
+[WPF UserControls]
+
+C:/Users/Paul_/source/repos/graphic_test3/graphic_test3/assests/
+
+
+[button clicking]
+https://stackoverflow.com/questions/6187944/how-can-i-create-a-dynamic-button-click-event-on-a-dynamic-button
+
+
+
+https://www.youtube.com/watch?v=4Kawvrf6X94                
+
+https://wpf-tutorial.com/usercontrols-and-customcontrols/creating-using-a-usercontrol/
+
+
+### https://stackoverflow.com/questions/17515631/add-an-image-in-a-wpf-button
+
+
+
+	    <Button VerticalAlignment="Center" Width="32">
+                <Image Source="{DynamicResource basket}" />
+            </Button>
+            <Separator Width="30"/>
+            <Button VerticalAlignment="Center" Width="32">
+                <Image Source="{DynamicResource signpost}" />
+            </Button>
+            <Separator Width="30"/>
+            <Button VerticalAlignment="Center" Width="32">
+                <Image Source="{DynamicResource calendar}" />
+            </Button>
+            <Separator Width="30"/>
+            <Button VerticalAlignment="Center" Width="32">
+                <Image Source="{DynamicResource settings}" />
+            </Button>
+            <Separator Width="30"/>
+            <Button VerticalAlignment="Center" Width="32">
+                <Image Source="{DynamicResource refresh}" />
+            </Button>
+            <Separator Width="30"/>
+            <Button VerticalAlignment="Center" Width="32">
+                <Image Source="{DynamicResource favorites}" />
+            </Button>
+            <Separator Width="30"/>
+            <Button VerticalAlignment="Center" Width="32" Grid.Row="0" Grid.Column="0">
+                <Image Source="{DynamicResource camera}" />
+            </Button>
+
+
+##############################################################################################
+
+
+SELECT DATE_FORMAT(stamp, '%H:%m - %m/%y') AS page_time FROM `incoming_photos` ORDER BY `incoming_photos`.`pk_id` LIMIT 1,12        
+ 
+ SELECT (COUNT(pk_id)/12) AS page, DATE_FORMAT(stamp, '%H:%m - %m/%y') AS page_time FROM `incoming_photos`
+ 
+ SELECT COUNT(pk_id) AS page, DATE_FORMAT(stamp, '%H:%m - %m/%y') AS page_time FROM `incoming_photos` WHERE  MOD(pk_id,12)=0
+ 
+ 
+ SELECT DATE_FORMAT(stamp, '%i') AS page_min, DATE_FORMAT(stamp, '%H:%i') AS page_time, DATE_FORMAT(stamp, '%m/%y') AS page_date FROM `incoming_photos` WHERE MOD(pk_id,12)=0 ORDER BY page_time
+ 
+
+
+SELECT @row_num := @row_num + 1 as row_index, DATE_FORMAT(stamp, '%H:%i') AS page_time, DATE_FORMAT(stamp, '%m/%y') AS page_date 
+FROM `incoming_photos` 
+WHERE MOD(pk_id,12)=0 
+GROUP BY page_time
+ORDER BY page_time
+
+
+SET @row_num = 0; 
+SELECT @row_num := @row_num + 1 as row_index, DATE_FORMAT(stamp, '%H:%i') AS page_time, DATE_FORMAT(stamp, '%m/%y') AS page_date 
+FROM `incoming_photos` 
+WHERE MOD(pk_id,12)=0 
+GROUP BY page_time
+ORDER BY row_index, page_time
+
+
+
+SET @row = 0; 
+
+SET @row_num = 0; 
+SELECT * 
+FROM ( 
+    SELECT 
+        @row := @row +1 AS rownum, DATE_FORMAT(stamp, '%H:%i') AS page_time
+    FROM ( 
+        SELECT @row :=0) r, `incoming_photos` 
+    ) ranked 
+WHERE rownum % [n] = 1 
+
+
+
+https://stackoverflow.com/questions/30171131/wpf-moving-border-around-on-screen
+http://csharphelper.com/blog/2015/04/animate-a-rectangle-moving-along-a-path-in-wpf-and-c/
+https://stackoverflow.com/questions/18960652/how-to-remove-dynamically-added-controls-in-wpf#18961126
+
+
+DoubleAnimation = doubleanimation = new DoubleAnimation();
+
+doubleanimation.From = 0;
+doubleanimation.To = 500;
+doubleanimation.Duration = TimeSpan.FromSecond(1)
+
+
+
+
